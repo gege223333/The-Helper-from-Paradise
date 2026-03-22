@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://720eb2ehrehw"]
+
+[ext_resource type="Script" uid="uid://bb0dgtph7i02k" path="res://screan/js/before.gd" id="1_2n0m7"]
+[ext_resource type="Texture2D" uid="uid://b6kr4cga5jbim" path="res://背景素材/唱歌比赛场景/唱歌比赛背景.png" id="2_ukkhs"]
+
+[node name="Before" type="Node2D"]
+script = ExtResource("1_2n0m7")
+
+[node name="唱歌比赛背景" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_ukkhs")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 803.0
+offset_top = 442.0
+offset_right = 1115.0
+offset_bottom = 547.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 57
+text = "开 始 游 戏
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

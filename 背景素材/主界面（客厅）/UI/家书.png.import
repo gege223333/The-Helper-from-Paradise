@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cskvnnt7oywcf"
+path="res://.godot/imported/家书.png-2d78ea625792cbefb7986c0567d41d9c.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/家书.png"
+dest_files=["res://.godot/imported/家书.png-2d78ea625792cbefb7986c0567d41d9c.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

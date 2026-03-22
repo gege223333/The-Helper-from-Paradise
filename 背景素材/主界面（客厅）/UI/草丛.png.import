@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://gbg2llyblavx"
+path="res://.godot/imported/草丛.png-007b5dc03aa49e01928db0333c84f91a.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/草丛.png"
+dest_files=["res://.godot/imported/草丛.png-007b5dc03aa49e01928db0333c84f91a.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

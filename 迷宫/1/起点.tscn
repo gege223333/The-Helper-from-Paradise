@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbgtd8nuadg0h"]
+
+[ext_resource type="Texture2D" uid="uid://bvbgsutybrbn" path="res://制作旗帜图片.png" id="1_knj4v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8vbtt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_knj4v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="起点" type="CharacterBody2D"]
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8vbtt")
+metadata/_edit_lock_ = true

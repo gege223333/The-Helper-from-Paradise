@@ -1,0 +1,13 @@
+audio music "res://音乐/2_rchx(2).wav"
+label 5
+获得能力——附身！
+[end_timeline]
+label 20:
+获得能力——控电！
+[end_timeline]
+label 40:
+获得能力——黑客骇入！
+[end_timeline]
+label 60:
+获得能力——灵体显现！
+[end_timeline]

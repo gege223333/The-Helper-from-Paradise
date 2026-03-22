@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://du7eej3p2dah"
+path="res://.godot/imported/纸片-154x77.png-c9839cf6a41cc4242de8158416b456b8.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/纸片-154x77.png"
+dest_files=["res://.godot/imported/纸片-154x77.png-c9839cf6a41cc4242de8158416b456b8.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

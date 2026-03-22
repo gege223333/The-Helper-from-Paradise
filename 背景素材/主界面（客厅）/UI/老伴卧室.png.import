@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://5jee4mfd3yjb"
+path="res://.godot/imported/老伴卧室.png-bf6cc8f62196c319d0b75b02f12ee7bd.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/老伴卧室.png"
+dest_files=["res://.godot/imported/老伴卧室.png-bf6cc8f62196c319d0b75b02f12ee7bd.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

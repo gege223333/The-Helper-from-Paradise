@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dv0j7haj3evvg"
+path="res://.godot/imported/夫妻卧室.png-518aac8a639fdb993df94fb270bd31c1.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/夫妻卧室.png"
+dest_files=["res://.godot/imported/夫妻卧室.png-518aac8a639fdb993df94fb270bd31c1.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

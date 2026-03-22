@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5lmvs83eq2gj"]
+
+[ext_resource type="Script" uid="uid://cjaqp4f6vfsmq" path="res://隐藏关卡/开始游戏界面.gd" id="1_dig2y"]
+[ext_resource type="Texture2D" uid="uid://rhcbgax63d10" path="res://背景素材/跳舞的地方/跳舞的地方.png" id="2_33sv7"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_dig2y")
+
+[node name="跳舞的地方" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1, 1)
+texture = ExtResource("2_33sv7")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 815.0
+offset_top = 488.0
+offset_right = 1124.0
+offset_bottom = 593.0
+theme_override_font_sizes/font_size = 80
+text = "开 始 游 戏"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

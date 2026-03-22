@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://day271w6ug2pe"
+path="res://.godot/imported/云朵.png-27845e62fb8470cc4c0e4ce435a155fa.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/云朵.png"
+dest_files=["res://.godot/imported/云朵.png-27845e62fb8470cc4c0e4ce435a155fa.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

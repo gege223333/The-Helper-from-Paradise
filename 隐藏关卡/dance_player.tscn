@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://cotoc5r8d407p"]
+
+[ext_resource type="Script" uid="uid://bdwqsungsjwvk" path="res://隐藏关卡/dance_player.gd" id="1_1tpir"]
+[ext_resource type="Texture2D" uid="uid://fypehaqx8cln" path="res://隐藏关卡/1.png" id="2_8h7p4"]
+[ext_resource type="Texture2D" uid="uid://cd3vnc7dugnmq" path="res://隐藏关卡/3.png" id="3_gmy1m"]
+[ext_resource type="Texture2D" uid="uid://b4g770mv1te6t" path="res://隐藏关卡/2.png" id="4_j7xs8"]
+[ext_resource type="Texture2D" uid="uid://yrcydb0u6v6o" path="res://隐藏关卡/5 (1).png" id="5_8h7p4"]
+[ext_resource type="Texture2D" uid="uid://dqxebjqsg77bw" path="res://隐藏关卡/4.png" id="6_jjiwx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u74om"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8h7p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gmy1m")
+}],
+"loop": true,
+"name": &"down",
+"speed": 1.25
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8h7p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j7xs8")
+}],
+"loop": true,
+"name": &"left",
+"speed": 1.25
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8h7p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8h7p4")
+}],
+"loop": true,
+"name": &"right",
+"speed": 1.25
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8h7p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jjiwx")
+}],
+"loop": true,
+"name": &"up",
+"speed": 1.25
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tpir"]
+size = Vector2(139.5, 259.5)
+
+[node name="dance player" type="CharacterBody2D"]
+script = ExtResource("1_1tpir")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-149.392, 1399.06)
+scale = Vector2(2.45017, 2.35012)
+sprite_frames = SubResource("SpriteFrames_u74om")
+animation = &"right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1001.25, 416.25)
+shape = SubResource("RectangleShape2D_1tpir")

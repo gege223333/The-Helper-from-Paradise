@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://bsr1icoarcs5"]
+
+[ext_resource type="Script" uid="uid://47074k5q3ox0" path="res://隐藏关卡/广场舞音游.gd" id="1_fu58c"]
+[ext_resource type="Texture2D" uid="uid://rhcbgax63d10" path="res://背景素材/跳舞的地方/跳舞的地方.png" id="1_wjo1e"]
+[ext_resource type="PackedScene" uid="uid://cotoc5r8d407p" path="res://隐藏关卡/dance_player.tscn" id="2_mtwyu"]
+[ext_resource type="Script" uid="uid://eay7voo1h82j" path="res://隐藏关卡/触发点.gd" id="3_51kx5"]
+[ext_resource type="Texture2D" uid="uid://b7p3y6jgf073l" path="res://隐藏关卡/3c17f8f0ba33af5a.png" id="3_ivswo"]
+[ext_resource type="PackedScene" uid="uid://c8lwv1b6fk1om" path="res://隐藏关卡/arrow.tscn" id="5_xbx1m"]
+[ext_resource type="AudioStream" uid="uid://cv18rijv8lrv8" path="res://音乐/yincang2.0.wav" id="6_a2ukl"]
+[ext_resource type="FontFile" uid="uid://dbipi3qlfeu2f" path="res://背景素材/SmileySans-Oblique.otf" id="8_bhhn8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_51kx5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ivswo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xbx1m"]
+
+[node name="广场舞音游" type="Node2D"]
+script = ExtResource("1_fu58c")
+
+[node name="跳舞的地方" type="Sprite2D" parent="."]
+position = Vector2(960.125, 537.5)
+scale = Vector2(0.998828, 1.00278)
+texture = ExtResource("1_wjo1e")
+metadata/_edit_lock_ = true
+
+[node name="dance player" parent="." instance=ExtResource("2_mtwyu")]
+position = Vector2(1027, -81)
+scale = Vector2(0.615629, 0.562682)
+
+[node name="触发点" type="Area2D" parent="."]
+script = ExtResource("3_51kx5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="触发点"]
+position = Vector2(590, 270)
+scale = Vector2(0.268501, 0.278147)
+sprite_frames = SubResource("SpriteFrames_51kx5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="触发点"]
+position = Vector2(589, 264)
+rotation = 1.63581
+scale = Vector2(-9.6201, 10.4304)
+shape = SubResource("CircleShape2D_xbx1m")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_a2ukl")
+volume_db = 10.0
+autoplay = true
+
+[node name="arrow" parent="." instance=ExtResource("5_xbx1m")]
+position = Vector2(1612, 277)
+scale = Vector2(0.889188, 0.861127)
+
+[node name="score" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 17.0
+offset_right = 93.0
+offset_bottom = 40.0
+scale = Vector2(5.30909, 5.13486)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.262745, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.619608, 0.894118, 0, 1)
+theme_override_fonts/font = ExtResource("8_bhhn8")
+text = "score：0"
+
+[node name="end" type="Label" parent="."]
+visible = false
+offset_left = 438.0
+offset_top = 432.0
+offset_right = 544.0
+offset_bottom = 457.0
+scale = Vector2(10.7468, 8.02197)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.260496, 0.12223, 0.127928, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_bhhn8")
+text = "准确率：0%"
+
+[connection signal="body_entered" from="触发点" to="触发点" method="_on_body_entered"]

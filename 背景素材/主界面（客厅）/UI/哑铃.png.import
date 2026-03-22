@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bw0tv6fp14wpt"
+path="res://.godot/imported/哑铃.png-7b547ffe2d78719d2828793d957528d0.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/哑铃.png"
+dest_files=["res://.godot/imported/哑铃.png-7b547ffe2d78719d2828793d957528d0.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

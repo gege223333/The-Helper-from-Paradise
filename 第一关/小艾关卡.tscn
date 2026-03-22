@@ -1,0 +1,108 @@
+[gd_scene load_steps=13 format=3 uid="uid://cwlrs6xqxh3fm"]
+
+[ext_resource type="Script" uid="uid://w8ywhbjjfobd" path="res://第一关/小艾关卡.gd" id="1_hbflt"]
+[ext_resource type="BitMap" uid="uid://day271w6ug2pe" path="res://背景素材/主界面（客厅）/UI/云朵.png" id="1_hhi8r"]
+[ext_resource type="BitMap" uid="uid://du7eej3p2dah" path="res://背景素材/主界面（客厅）/UI/纸片-154x77.png" id="1_t208c"]
+[ext_resource type="BitMap" uid="uid://gbg2llyblavx" path="res://背景素材/主界面（客厅）/UI/草丛.png" id="2_hbflt"]
+[ext_resource type="BitMap" uid="uid://cp5btwp8820br" path="res://背景素材/主界面（客厅）/UI/衣服.png" id="3_4se5w"]
+[ext_resource type="Script" uid="uid://pt1fhvwnt3x5" path="res://第一关/场景按钮/云朵.gd" id="3_23vqd"]
+[ext_resource type="Script" uid="uid://cmqatx2ebknea" path="res://第一关/场景按钮/树.gd" id="3_qjbum"]
+[ext_resource type="BitMap" uid="uid://bnt3uihi4hxc4" path="res://背景素材/主界面（客厅）/UI/树木.png" id="5_23vqd"]
+[ext_resource type="Script" uid="uid://csmehilhf0wwd" path="res://第一关/场景按钮/纸片.gd" id="5_qjbum"]
+[ext_resource type="Script" uid="uid://3xub5t1igmie" path="res://第一关/场景按钮/衣服.gd" id="7_qjbum"]
+[ext_resource type="AudioStream" uid="uid://dyiy8m2ng334q" path="res://音乐/2_rchx(2).wav" id="11_a1k78"]
+[ext_resource type="Script" uid="uid://d04r4m3bxkq3m" path="res://第一关/2_rchx(2).gd" id="12_p55fk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hbflt")
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="树" type="TextureButton" parent="CanvasLayer"]
+offset_left = 1297.0
+offset_top = 1.0
+offset_right = 1779.0
+offset_bottom = 728.0
+texture_click_mask = ExtResource("5_23vqd")
+script = ExtResource("3_qjbum")
+metadata/_edit_lock_ = true
+
+[node name="PopupMenu" type="PopupMenu" parent="CanvasLayer/树"]
+theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_separator_size = 30
+
+[node name="纸片" type="TextureButton" parent="CanvasLayer"]
+offset_left = 463.0
+offset_top = 936.0
+offset_right = 617.0
+offset_bottom = 1014.0
+texture_click_mask = ExtResource("1_t208c")
+script = ExtResource("5_qjbum")
+metadata/_edit_lock_ = true
+
+[node name="PopupMenu" type="PopupMenu" parent="CanvasLayer/纸片"]
+theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_separator_size = 30
+
+[node name="衣服" type="TextureButton" parent="CanvasLayer"]
+offset_left = 768.0
+offset_top = 245.0
+offset_right = 1397.0
+offset_bottom = 732.0
+texture_click_mask = ExtResource("3_4se5w")
+script = ExtResource("7_qjbum")
+metadata/_edit_lock_ = true
+
+[node name="PopupMenu" type="PopupMenu" parent="CanvasLayer/衣服"]
+theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_separator_size = 30
+
+[node name="草丛" type="TextureButton" parent="CanvasLayer"]
+offset_left = 576.0
+offset_top = 546.0
+offset_right = 760.0
+offset_bottom = 711.0
+texture_click_mask = ExtResource("2_hbflt")
+metadata/_edit_lock_ = true
+
+[node name="PopupMenu" type="PopupMenu" parent="CanvasLayer/草丛"]
+
+[node name="云朵" type="TextureButton" parent="CanvasLayer"]
+offset_left = 863.0
+offset_top = 23.0
+offset_right = 1426.0
+offset_bottom = 210.0
+texture_click_mask = ExtResource("1_hhi8r")
+script = ExtResource("3_23vqd")
+metadata/_edit_lock_ = true
+
+[node name="PopupMenu" type="PopupMenu" parent="CanvasLayer/云朵"]
+theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_separator_size = 30
+
+[node name="currentscene" type="Sprite2D" parent="CanvasLayer/云朵"]
+position = Vector2(98, 517)
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(961, 540)
+metadata/_edit_lock_ = true
+
+[node name="2Rchx(2)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_a1k78")
+autoplay = true
+playback_type = 1
+script = ExtResource("12_p55fk")
+
+[connection signal="pressed" from="CanvasLayer/树" to="." method="_on_树_pressed"]
+[connection signal="pressed" from="CanvasLayer/纸片" to="." method="_on_纸片_pressed"]
+[connection signal="pressed" from="CanvasLayer/衣服" to="." method="_on_衣服_pressed"]
+[connection signal="pressed" from="CanvasLayer/草丛" to="." method="_on_草丛_pressed"]
+[connection signal="pressed" from="CanvasLayer/云朵" to="." method="_on_云朵_pressed"]

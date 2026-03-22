@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://upcosvftptn8"]
+
+[ext_resource type="Script" uid="uid://sfcupyb8nhu8" path="res://迷宫/1/monster.gd" id="1_htyi1"]
+[ext_resource type="Texture2D" uid="uid://bkteqjdbpcu6l" path="res://迷宫/1/解析器错误解释 (1).png" id="2_hhs18"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ga5te"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hhs18")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vr0w3"]
+size = Vector2(502.5, 779.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrqeg"]
+size = Vector2(144, 240.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ga5te"]
+size = Vector2(184, 354)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tndq"]
+size = Vector2(173.625, 399)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ngjm"]
+radius = 227.0
+height = 500.0
+
+[node name="Monster" type="Area2D"]
+script = ExtResource("1_htyi1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-19, -2)
+sprite_frames = SubResource("SpriteFrames_ga5te")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-26, -117)
+shape = SubResource("RectangleShape2D_vr0w3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(139, 394.75)
+shape = SubResource("RectangleShape2D_mrqeg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-179, 355)
+shape = SubResource("RectangleShape2D_ga5te")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(303.375, 178.5)
+shape = SubResource("RectangleShape2D_6tndq")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(-367.188, 170)
+shape = SubResource("RectangleShape2D_6tndq")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(130, 2)
+shape = SubResource("CapsuleShape2D_8ngjm")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(-166, -11)
+shape = SubResource("CapsuleShape2D_8ngjm")
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

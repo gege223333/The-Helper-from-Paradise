@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://qarx7yc4v1r0"]
+
+[ext_resource type="Script" uid="uid://cym444dnpnsva" path="res://迷宫/1/代码/终点.gd" id="1_hobfn"]
+[ext_resource type="Texture2D" uid="uid://bsm8y8ny2w5jh" path="res://迷宫/1/制作旗帜图片 (1) (1).png" id="2_ihir1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x8smt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ihir1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqa20"]
+size = Vector2(696, 599)
+
+[node name="到达终点" type="Area2D"]
+script = ExtResource("1_hobfn")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(204, 28)
+sprite_frames = SubResource("SpriteFrames_x8smt")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(233, -263.5)
+shape = SubResource("RectangleShape2D_nqa20")
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

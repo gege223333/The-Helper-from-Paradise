@@ -1,0 +1,113 @@
+[gd_scene load_steps=6 format=3 uid="uid://s2jo36b7ip0p"]
+
+[ext_resource type="Script" uid="uid://by8ue43xmla1w" path="res://screan/js/main.gd" id="1_6435k"]
+[ext_resource type="Texture2D" uid="uid://c20hrlxpk2tdk" path="res://screan/sing.png" id="2_8s0av"]
+[ext_resource type="AudioStream" uid="uid://bq4y61ackengu" path="res://screan/爱如火 -  - 输出 - Stereo Out.wav" id="2_gy8aj"]
+[ext_resource type="AudioStream" uid="uid://5wm7hmeqrgfr" path="res://screan/y1836.wav" id="3_psmhd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gy8aj"]
+size = Vector2(1163.5, 210)
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("label1")]
+script = ExtResource("1_6435k")
+label1 = NodePath("Label4")
+
+[node name="Sing" type="Sprite2D" parent="."]
+position = Vector2(959.541, 540.32)
+scale = Vector2(0.99949, 0.99874)
+texture = ExtResource("2_8s0av")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -6.99997
+offset_top = 809.0
+offset_right = 1150.0
+offset_bottom = 837.0
+scale = Vector2(1.67382, 1.72855)
+color = Color(0.996336, 0.886705, 0.653492, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 192.0
+offset_bottom = 122.0
+scale = Vector2(1.67381, 1.65182)
+theme_override_colors/font_shadow_color = Color(0.92549, 0.541176, 0.254902, 1)
+theme_override_font_sizes/font_size = 41
+text = "scores：0
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_gy8aj")
+autoplay = true
+bus = &"analyzer"
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(383.791, 215.82)
+scale = Vector2(1.67381, 1.65182)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(341.86, 417.225)
+shape = SubResource("RectangleShape2D_gy8aj")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(383.791, 215.82)
+scale = Vector2(1.67381, 1.65182)
+stream = ExtResource("3_psmhd")
+volume_db = 9.369
+pitch_scale = 1.5
+bus = &"jz"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 779.0
+offset_top = 792.0
+offset_right = 823.0
+offset_bottom = 909.0
+scale = Vector2(1.67381, 1.65182)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 41
+text = "D
+"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 374.0
+offset_top = 791.0
+offset_right = 406.0
+offset_bottom = 848.0
+scale = Vector2(1.67381, 1.65182)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 41
+text = "S"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 1571.0
+offset_top = 791.0
+offset_right = 1621.0
+offset_bottom = 908.0
+scale = Vector2(1.67381, 1.65182)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 41
+text = "K"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 1197.0
+offset_top = 779.0
+offset_right = 1250.0
+offset_bottom = 896.0
+scale = Vector2(1.67381, 1.65182)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 41
+text = "J"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 393.0
+offset_top = 352.0
+offset_right = 942.0
+offset_bottom = 631.0
+scale = Vector2(1.67381, 1.65182)
+theme_override_colors/font_shadow_color = Color(0.92549, 0.541176, 0.254902, 1)
+theme_override_font_sizes/font_size = 101
+text = "准确率：0%
+"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://cn7l10ul718hc"]
+
+[ext_resource type="Script" uid="uid://3u7vklqsckkr" path="res://致谢.gd" id="1_pbx1c"]
+[ext_resource type="Texture2D" uid="uid://b215vdmoeoipj" path="res://背景素材/主界面（客厅）/客厅-下午.png" id="1_qfglv"]
+[ext_resource type="Texture2D" uid="uid://cg12bp3bd6jxj" path="res://背景素材/乐谱P5.png" id="2_pbx1c"]
+[ext_resource type="AudioStream" uid="uid://cv18rijv8lrv8" path="res://音乐/yincang2.0.wav" id="4_e07m0"]
+[ext_resource type="Script" uid="uid://c05r1cvb1u6e6" path="res://yincang_2_0.gd" id="5_84gny"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pbx1c")
+
+[node name="客厅-下午" type="Sprite2D" parent="."]
+modulate = Color(0.582759, 0.582759, 0.582759, 1)
+position = Vector2(960, 540)
+texture = ExtResource("1_qfglv")
+
+[node name="乐谱p5" type="Sprite2D" parent="."]
+position = Vector2(1454, 602)
+scale = Vector2(0.724025, 0.679855)
+texture = ExtResource("2_pbx1c")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 52.0
+offset_right = 1461.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 30
+text = "终于做完了…………在此真诚地感谢石渠阁的朋友周千涵和李家乐，她们两个虽然不是本校的但是愿意因为十几年的友谊给这个项目打白工（虽然请吃饭了！）"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 36.0
+offset_top = 117.0
+offset_right = 1116.0
+offset_bottom = 154.0
+theme_override_font_sizes/font_size = 30
+text = "周千涵作为物理系学生但作曲能力十分了得，给这个项目写的每首曲子都超级好听，言语匮乏无法形容，只能说如听仙乐耳暂明！"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 36.0
+offset_top = 182.0
+offset_right = 705.0
+offset_bottom = 219.0
+theme_override_font_sizes/font_size = 30
+text = "感谢李家乐在美术方面和AI斗智斗勇帮我们生成了几位角色"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 42.0
+offset_top = 246.0
+offset_right = 810.0
+offset_bottom = 283.0
+theme_override_font_sizes/font_size = 30
+text = "也自我感谢一下，两位码农你们辛苦了………对着代码哈气不容易啊……"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 302.0
+offset_right = 785.0
+offset_bottom = 339.0
+theme_override_font_sizes/font_size = 30
+text = "最后也谢谢你们能够体验这个不成熟但是花费了我们很多心血的作品。"
+
+[node name="Label6" type="Label" parent="."]
+offset_top = 354.0
+offset_right = 1081.0
+offset_bottom = 391.0
+theme_override_font_sizes/font_size = 30
+text = "（BTW右边的乐谱是周千涵觉得写得最厉害的一部分特此展示！！当时还对着这张曲谱半场开香槟hh）"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 80.0
+offset_top = 967.0
+offset_right = 136.0
+offset_bottom = 1012.0
+theme_override_font_sizes/font_size = 50
+text = "返 回"
+
+[node name="Yincang2_0" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_e07m0")
+autoplay = true
+playback_type = 1
+script = ExtResource("5_84gny")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

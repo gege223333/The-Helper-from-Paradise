@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bq4y61ackengu"
+path="res://.godot/imported/爱如火 -  - 输出 - Stereo Out.wav-5752780a0a7cb1882a13613d51a3057e.sample"
+
+[deps]
+
+source_file="res://screan/爱如火 -  - 输出 - Stereo Out.wav"
+dest_files=["res://.godot/imported/爱如火 -  - 输出 - Stereo Out.wav-5752780a0a7cb1882a13613d51a3057e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

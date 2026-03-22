@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bnt3uihi4hxc4"
+path="res://.godot/imported/树木.png-04e56e5d40c257b1765aca6e84dcd792.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/树木.png"
+dest_files=["res://.godot/imported/树木.png-04e56e5d40c257b1765aca6e84dcd792.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

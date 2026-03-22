@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cp5btwp8820br"
+path="res://.godot/imported/衣服.png-fd38b385d4895ce2b9515675d56cc6ff.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/衣服.png"
+dest_files=["res://.godot/imported/衣服.png-fd38b385d4895ce2b9515675d56cc6ff.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

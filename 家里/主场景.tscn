@@ -1,0 +1,339 @@
+[gd_scene load_steps=25 format=3 uid="uid://bquvijk7i33i2"]
+
+[ext_resource type="Script" uid="uid://qlm8m6sqtka3" path="res://家里/主场景.gd" id="1_e3it6"]
+[ext_resource type="FontFile" uid="uid://bl5cmbmkuw0xp" path="res://标题界面/SmileySans-Oblique.ttf" id="1_nquep"]
+[ext_resource type="BitMap" uid="uid://bbtry082g6xi" path="res://背景素材/主界面（客厅）/UI/sha fa-可点击部分.png" id="3_e3it6"]
+[ext_resource type="BitMap" uid="uid://bw0tv6fp14wpt" path="res://背景素材/主界面（客厅）/UI/哑铃.png" id="4_h7vci"]
+[ext_resource type="BitMap" uid="uid://cskvnnt7oywcf" path="res://背景素材/主界面（客厅）/UI/家书.png" id="5_wl5ll"]
+[ext_resource type="Script" uid="uid://xcs5f1elutef" path="res://家里/房间/家具按钮/信件任务面板.gd" id="6_206se"]
+[ext_resource type="BitMap" uid="uid://ddpyul220e14e" path="res://背景素材/主界面（客厅）/UI/日历.png" id="6_yip8r"]
+[ext_resource type="BitMap" uid="uid://c5mrow7n038rf" path="res://背景素材/主界面（客厅）/UI/电脑.png" id="7_mpg1l"]
+[ext_resource type="Texture2D" uid="uid://xlnsysmdoeky" path="res://背景素材/信件.jpg" id="7_rujhe"]
+[ext_resource type="BitMap" uid="uid://dv0j7haj3evvg" path="res://背景素材/主界面（客厅）/UI/夫妻卧室.png" id="8_sfpb0"]
+[ext_resource type="BitMap" uid="uid://5jee4mfd3yjb" path="res://背景素材/主界面（客厅）/UI/老伴卧室.png" id="9_mrjte"]
+[ext_resource type="Script" uid="uid://bxlmux86ibwhp" path="res://家里/房间/家具按钮/电脑.gd" id="9_no6bp"]
+[ext_resource type="BitMap" uid="uid://l6ah4yio8v65" path="res://背景素材/主界面（客厅）/UI/小艾卧室.png" id="10_5vo34"]
+[ext_resource type="Script" uid="uid://cxi6gluqrvckq" path="res://家里/房间/家具按钮/哑铃.gd" id="10_privv"]
+[ext_resource type="BitMap" uid="uid://b71c821xeu5iv" path="res://背景素材/主界面（客厅）/UI/信件任务条.png" id="16_qajoi"]
+[ext_resource type="Script" uid="uid://bplgi4x5x816l" path="res://家里/房间/家具按钮/小艾.gd" id="17_no6bp"]
+[ext_resource type="Script" uid="uid://bew5miahmp74n" path="res://家里/房间/家具按钮/老伴.gd" id="18_i1cj5"]
+[ext_resource type="Script" uid="uid://dd0t72i6i8xxn" path="res://家里/房间/家具按钮/沙发.gd" id="18_qajoi"]
+[ext_resource type="Script" uid="uid://bd1lwv5ohpwh6" path="res://家里/房间/家具按钮/大伟.gd" id="19_3van2"]
+[ext_resource type="AudioStream" uid="uid://dyiy8m2ng334q" path="res://音乐/2_rchx(2).wav" id="20_no6bp"]
+[ext_resource type="Script" uid="uid://1jamwbs83qvx" path="res://家里/2_rchx(2).gd" id="21_i1cj5"]
+
+[sub_resource type="Theme" id="Theme_e3it6"]
+
+[sub_resource type="GDScript" id="GDScript_nquep"]
+
+[sub_resource type="Theme" id="Theme_qajoi"]
+default_font_size = 30
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_e3it6")
+script = ExtResource("1_e3it6")
+metadata/_edit_lock_ = true
+
+[node name="CurrentRoom" type="Sprite2D" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = SubResource("GDScript_nquep")
+
+[node name="天数" type="Label" parent="UI"]
+offset_left = 1721.0
+offset_top = 62.0
+offset_right = 1861.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("1_nquep")
+theme_override_font_sizes/font_size = 50
+text = "天 数 ："
+metadata/_edit_lock_ = true
+
+[node name="精力" type="Label" parent="UI"]
+offset_left = 1422.0
+offset_top = 63.0
+offset_right = 1552.0
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 50
+text = "精 力："
+metadata/_edit_lock_ = true
+
+[node name="能力" type="Label" parent="UI"]
+offset_left = 1250.0
+offset_top = 64.0
+offset_right = 1370.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 50
+text = "能力："
+metadata/_edit_lock_ = true
+
+[node name="斜杠" type="Label" parent="UI"]
+offset_left = 1608.0
+offset_top = 63.0
+offset_right = 1628.0
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 50
+text = "/"
+metadata/_edit_lock_ = true
+
+[node name="信力" type="Label" parent="UI"]
+offset_left = 1070.0
+offset_top = 63.0
+offset_right = 1190.0
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 50
+text = "信力："
+metadata/_edit_lock_ = true
+
+[node name="能力值" type="Label" parent="UI"]
+offset_left = 1363.0
+offset_top = 64.0
+offset_right = 1388.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 50
+metadata/_edit_lock_ = true
+
+[node name="当前精力值" type="Label" parent="UI"]
+offset_left = 1545.0
+offset_top = 63.0
+offset_right = 1590.0
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 50
+metadata/_edit_lock_ = true
+
+[node name="最大精力值" type="Label" parent="UI"]
+offset_left = 1642.0
+offset_top = 63.0
+offset_right = 1687.0
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 50
+metadata/_edit_lock_ = true
+
+[node name="当前天数" type="Label" parent="UI"]
+offset_left = 1856.0
+offset_top = 63.0
+offset_right = 1904.0
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 50
+metadata/_edit_lock_ = true
+
+[node name="信力值" type="Label" parent="UI"]
+offset_left = 1182.0
+offset_top = 65.0
+offset_right = 1222.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 50
+metadata/_edit_lock_ = true
+
+[node name="Abilitylabel" type="Label" parent="UI"]
+offset_left = 1038.0
+offset_top = 516.0
+offset_right = 1078.0
+offset_bottom = 553.0
+theme_override_font_sizes/font_size = 30
+
+[node name="客厅家具按钮" type="CanvasLayer" parent="."]
+
+[node name="哑铃" type="TextureButton" parent="客厅家具按钮"]
+offset_left = 102.0
+offset_top = 892.0
+offset_right = 580.0
+offset_bottom = 1077.0
+texture_click_mask = ExtResource("4_h7vci")
+script = ExtResource("10_privv")
+metadata/_edit_lock_ = true
+
+[node name="PopupMenu" type="PopupMenu" parent="客厅家具按钮/哑铃"]
+theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_separator_size = 30
+
+[node name="家书" type="TextureButton" parent="客厅家具按钮"]
+offset_left = 761.0
+offset_top = 768.0
+offset_right = 946.0
+offset_bottom = 885.0
+texture_click_mask = ExtResource("5_wl5ll")
+metadata/_edit_lock_ = true
+
+[node name="日历" type="TextureButton" parent="客厅家具按钮"]
+offset_left = 996.0
+offset_top = 726.0
+offset_right = 1140.0
+offset_bottom = 856.0
+texture_click_mask = ExtResource("6_yip8r")
+metadata/_edit_lock_ = true
+
+[node name="电脑" type="TextureButton" parent="客厅家具按钮"]
+offset_left = 1395.0
+offset_top = 651.0
+offset_right = 1920.0
+offset_bottom = 1087.0
+texture_click_mask = ExtResource("7_mpg1l")
+script = ExtResource("9_no6bp")
+metadata/_edit_lock_ = true
+
+[node name="PopupPanel" type="PopupPanel" parent="客厅家具按钮/电脑"]
+auto_translate_mode = 1
+size = Vector2i(100, 102)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="客厅家具按钮/电脑/PopupPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 156.0
+offset_bottom = 147.0
+
+[node name="保存" type="Button" parent="客厅家具按钮/电脑/PopupPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "保存"
+
+[node name="AcceptDialog" type="AcceptDialog" parent="客厅家具按钮/电脑/PopupPanel/VBoxContainer/保存"]
+unresizable = true
+content_scale_size = Vector2i(100, 100)
+theme = SubResource("Theme_qajoi")
+
+[node name="取消" type="Button" parent="客厅家具按钮/电脑/PopupPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "取消"
+
+[node name="回到标题界面" type="Button" parent="客厅家具按钮/电脑/PopupPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "回到标题界面"
+
+[node name="夫妻卧室" type="TextureButton" parent="客厅家具按钮"]
+offset_left = 410.0
+offset_top = 233.0
+offset_right = 645.0
+offset_bottom = 712.0
+texture_click_mask = ExtResource("8_sfpb0")
+metadata/_edit_lock_ = true
+
+[node name="老伴卧室" type="TextureButton" parent="客厅家具按钮"]
+offset_left = 1217.0
+offset_top = 236.0
+offset_right = 1444.0
+offset_bottom = 710.0
+texture_click_mask = ExtResource("9_mrjte")
+metadata/_edit_lock_ = true
+
+[node name="小艾卧室" type="TextureButton" parent="客厅家具按钮"]
+offset_left = 1505.0
+offset_top = 205.0
+offset_right = 1667.0
+offset_bottom = 653.0
+texture_click_mask = ExtResource("10_5vo34")
+metadata/_edit_lock_ = true
+
+[node name="沙发" type="TextureButton" parent="客厅家具按钮"]
+offset_left = 606.0
+offset_top = 511.0
+offset_right = 1267.0
+offset_bottom = 827.0
+texture_click_mask = ExtResource("3_e3it6")
+script = ExtResource("18_qajoi")
+metadata/_edit_lock_ = true
+
+[node name="PopupMenu" type="PopupMenu" parent="客厅家具按钮/沙发"]
+theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_separator_size = 30
+
+[node name="信件任务面板" type="Panel" parent="客厅家具按钮"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_206se")
+metadata/_edit_lock_ = true
+
+[node name="信件图片" type="TextureRect" parent="客厅家具按钮/信件任务面板"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 12.25
+anchor_top = 3.2
+anchor_right = 37.15
+anchor_bottom = 32.875
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_rujhe")
+metadata/_edit_use_anchors_ = true
+
+[node name="收起信件" type="Button" parent="客厅家具按钮/信件任务面板"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 32.2
+anchor_top = 3.875
+anchor_right = 36.4
+anchor_bottom = 5.6
+offset_bottom = -1.52588e-05
+theme_override_font_sizes/font_size = 50
+text = "收起信件"
+metadata/_edit_use_anchors_ = true
+
+[node name="小艾" type="TextureButton" parent="客厅家具按钮/信件任务面板"]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 253.0
+offset_right = 1463.0
+offset_bottom = 433.0
+texture_click_mask = ExtResource("16_qajoi")
+script = ExtResource("17_no6bp")
+
+[node name="PopupMenu" type="PopupMenu" parent="客厅家具按钮/信件任务面板/小艾"]
+theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_separator_size = 30
+
+[node name="老伴" type="TextureButton" parent="客厅家具按钮/信件任务面板"]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 568.0
+offset_right = 1456.0
+offset_bottom = 748.0
+texture_click_mask = ExtResource("16_qajoi")
+script = ExtResource("18_i1cj5")
+
+[node name="PopupMenu" type="PopupMenu" parent="客厅家具按钮/信件任务面板/老伴"]
+theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_separator_size = 30
+
+[node name="大伟" type="TextureButton" parent="客厅家具按钮/信件任务面板"]
+layout_mode = 0
+offset_left = 549.0
+offset_top = 899.0
+offset_right = 1469.0
+offset_bottom = 1079.0
+texture_click_mask = ExtResource("16_qajoi")
+script = ExtResource("19_3van2")
+
+[node name="PopupMenu" type="PopupMenu" parent="客厅家具按钮/信件任务面板/大伟"]
+theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_separator_size = 30
+
+[node name="Camera2D" type="Camera2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Rchx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_no6bp")
+autoplay = true
+playback_type = 1
+script = ExtResource("21_i1cj5")
+
+[connection signal="pressed" from="客厅家具按钮/哑铃" to="." method="_on_哑铃_pressed"]
+[connection signal="pressed" from="客厅家具按钮/家书" to="." method="_on_家书_pressed"]
+[connection signal="pressed" from="客厅家具按钮/日历" to="." method="_on_日历_pressed"]
+[connection signal="pressed" from="客厅家具按钮/电脑" to="." method="_on_电脑_pressed"]
+[connection signal="pressed" from="客厅家具按钮/电脑/PopupPanel/VBoxContainer/保存" to="客厅家具按钮/日历" method="_save"]
+[connection signal="pressed" from="客厅家具按钮/电脑/PopupPanel/VBoxContainer/取消" to="客厅家具按钮/日历" method="_cancel"]
+[connection signal="pressed" from="客厅家具按钮/夫妻卧室" to="." method="_on_夫妻卧室_pressed"]
+[connection signal="pressed" from="客厅家具按钮/老伴卧室" to="." method="_on_老伴卧室_pressed"]
+[connection signal="pressed" from="客厅家具按钮/小艾卧室" to="." method="_on_小艾卧室_pressed"]
+[connection signal="pressed" from="客厅家具按钮/沙发" to="." method="_on_沙发_pressed"]
+[connection signal="pressed" from="客厅家具按钮/信件任务面板/小艾" to="客厅家具按钮/信件任务面板" method="_on_小艾_pressed"]
+[connection signal="pressed" from="客厅家具按钮/信件任务面板/老伴" to="客厅家具按钮/信件任务面板" method="_on_老伴_pressed"]
+[connection signal="pressed" from="客厅家具按钮/信件任务面板/大伟" to="客厅家具按钮/信件任务面板" method="_on_大伟_pressed"]

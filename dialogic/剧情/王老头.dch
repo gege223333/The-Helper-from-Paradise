@@ -1,0 +1,121 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "无表情",
+&"description": "",
+&"display_name": "王老头",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"伤心": {
+"export_overrides": {
+"image": "\"res://人物素材/王老头/王老头-伤心.jpg\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"叹气": {
+"export_overrides": {
+"image": "\"res://人物素材/王老头/王老头-叹气.jpg\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"尴尬": {
+"export_overrides": {
+"image": "\"res://人物素材/王老头/王老头-尴尬.jpg\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"开心": {
+"export_overrides": {
+"image": "\"res://人物素材/王老头/王老头-开心.jpg\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"思考": {
+"export_overrides": {
+"image": "\"res://人物素材/王老头/王老头-思考.jpg\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"惊讶": {
+"export_overrides": {
+"image": "\"res://人物素材/王老头/王老头-惊讶.jpg\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"担忧": {
+"export_overrides": {
+"image": "\"res://人物素材/王老头/王老头-叹气.jpg\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"无表情": {
+"export_overrides": {
+"image": "\"res://人物素材/王老头/王老头-无表情.jpg\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"欣慰": {
+"export_overrides": {
+"image": "\"res://人物素材/王老头/王老头-欣慰.jpg\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"生气": {
+"export_overrides": {
+"image": "\"res://人物素材/王老头/王老头-生气.jpg\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"疑惑": {
+"export_overrides": {
+"image": "\"res://人物素材/王老头/王老头-疑惑.jpg\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

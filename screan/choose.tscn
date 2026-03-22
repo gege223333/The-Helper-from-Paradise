@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://2hjlh87bpoeq"]
+
+[ext_resource type="Texture2D" uid="uid://b6kr4cga5jbim" path="res://背景素材/唱歌比赛场景/唱歌比赛背景.png" id="1_1h0m6"]
+[ext_resource type="Script" uid="uid://lk03cbaqxuln" path="res://screan/js/choose.gd" id="1_b2g5h"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_b2g5h")
+
+[node name="唱歌比赛背景" type="Sprite2D" parent="."]
+position = Vector2(960, 540.5)
+scale = Vector2(1, 1.00093)
+texture = ExtResource("1_1h0m6")
+
+[node name="喜爱之曲" type="Button" parent="."]
+offset_left = 1192.0
+offset_top = 498.0
+offset_right = 1392.0
+offset_bottom = 579.0
+theme_override_font_sizes/font_size = 60
+text = "喜爱之曲"
+
+[node name="定情之曲" type="Button" parent="."]
+offset_left = 548.0
+offset_top = 496.0
+offset_right = 748.0
+offset_bottom = 577.0
+theme_override_font_sizes/font_size = 60
+text = "定情之曲"
+
+[connection signal="pressed" from="喜爱之曲" to="." method="_on_喜爱之曲_pressed"]
+[connection signal="pressed" from="定情之曲" to="." method="_on_定情之曲_pressed"]

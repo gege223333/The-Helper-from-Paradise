@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ddpyul220e14e"
+path="res://.godot/imported/日历.png-384e5582d5959eee942d26e3e9d6087d.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/日历.png"
+dest_files=["res://.godot/imported/日历.png-384e5582d5959eee942d26e3e9d6087d.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

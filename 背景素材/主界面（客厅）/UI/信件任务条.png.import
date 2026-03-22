@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b71c821xeu5iv"
+path="res://.godot/imported/信件任务条.png-5d54638b236176651cb3ec846b792a9a.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/信件任务条.png"
+dest_files=["res://.godot/imported/信件任务条.png-5d54638b236176651cb3ec846b792a9a.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

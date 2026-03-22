@@ -1,0 +1,3 @@
+[background arg="res://背景素材/唱歌比赛场景/唱歌比赛背景.png" fade="0.0"]
+audio music "res://音乐/2_rchx(2).wav"
+准确率为{Global.percentage}%

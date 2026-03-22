@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c418cxngsy00o"]
+
+[ext_resource type="Texture2D" uid="uid://d37mtdstw13fh" path="res://背景素材/迷宫/迷宫.png" id="1_n5q3t"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="主场景" type="Sprite2D" parent="."]
+position = Vector2(-26, 36)
+scale = Vector2(1.51354, 1.55185)
+texture = ExtResource("1_n5q3t")
+
+[node name="Camera2D" type="Camera2D" parent="主场景"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://l6ah4yio8v65"
+path="res://.godot/imported/小艾卧室.png-ab0c8c3617cde02998d2261f503c4b5b.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/小艾卧室.png"
+dest_files=["res://.godot/imported/小艾卧室.png-ab0c8c3617cde02998d2261f503c4b5b.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

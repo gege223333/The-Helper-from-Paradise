@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c5mrow7n038rf"
+path="res://.godot/imported/电脑.png-619faa83572a42cd5f4dc3e236ae58fc.res"
+
+[deps]
+
+source_file="res://背景素材/主界面（客厅）/UI/电脑.png"
+dest_files=["res://.godot/imported/电脑.png-619faa83572a42cd5f4dc3e236ae58fc.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

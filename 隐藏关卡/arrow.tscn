@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8lwv1b6fk1om"]
+
+[ext_resource type="Texture2D" uid="uid://i162rb7dwtvb" path="res://隐藏关卡/OIP-C.png" id="1_l5ahi"]
+[ext_resource type="Script" uid="uid://b3molp2hfsd3s" path="res://隐藏关卡/arrow.gd" id="2_2ndhl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ndhl"]
+atlas = ExtResource("1_l5ahi")
+region = Rect2(19, 44, 165, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acd0x"]
+atlas = ExtResource("1_l5ahi")
+region = Rect2(184, 44, 165, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a6ax"]
+atlas = ExtResource("1_l5ahi")
+region = Rect2(19, 197, 165, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4m3f"]
+atlas = ExtResource("1_l5ahi")
+region = Rect2(184, 197, 165, 153)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fo0gb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ndhl")
+}],
+"loop": true,
+"name": &"down-arr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acd0x")
+}],
+"loop": true,
+"name": &"left-arr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6a6ax")
+}],
+"loop": true,
+"name": &"right-arr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4m3f")
+}],
+"loop": true,
+"name": &"up-arr",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ndhl"]
+radius = 66.2722
+
+[node name="arrow" type="CharacterBody2D"]
+position = Vector2(-5.99976, 2.00006)
+scale = Vector2(1.15155, 0.901791)
+script = ExtResource("2_2ndhl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, -1)
+sprite_frames = SubResource("SpriteFrames_fo0gb")
+animation = &"up-arr"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -3)
+shape = SubResource("CircleShape2D_2ndhl")

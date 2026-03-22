@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://dm10c7i2kpe3k"]
+
+[ext_resource type="Texture2D" uid="uid://bmt26kimra6kg" path="res://screan/picture/R-C.png" id="1_8ftin"]
+[ext_resource type="Script" uid="uid://di31qbq3qmnwj" path="res://screan/js/anim.gd" id="2_6foja"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6foja"]
+atlas = ExtResource("1_8ftin")
+region = Rect2(364, 151, 91, 151)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhu64"]
+atlas = ExtResource("1_8ftin")
+region = Rect2(546, 302, 91, 151)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5mty"]
+atlas = ExtResource("1_8ftin")
+region = Rect2(0, 302, 91, 151)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1rude"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6foja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhu64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5mty")
+}],
+"loop": true,
+"name": &"play",
+"speed": 5.0
+}]
+
+[node name="Anim" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_1rude")
+animation = &"play"
+frame_progress = 0.818457
+speed_scale = 2.0
+script = ExtResource("2_6foja")

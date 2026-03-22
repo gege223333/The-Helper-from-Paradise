@@ -1,0 +1,28 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://cwhp0bpgmut5p"]
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_j3pel"]
+resource_name = "SpectrumAnalyzer"
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_j3pel"]
+resource_name = "Delay"
+dry = 0.0
+tap1_delay_ms = 1322.0
+tap2_active = false
+
+[resource]
+bus/1/name = &"anlyzer"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_j3pel")
+bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectDelay_j3pel")
+bus/1/effect/1/enabled = true
+bus/2/name = &"jz"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
